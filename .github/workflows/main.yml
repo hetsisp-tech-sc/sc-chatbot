@@ -28,8 +28,12 @@ jobs:
             aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
             output-credentials: true
-        - name: Echo AWS Profile Name
-          run: echo "AWS Profile Name:" $AWS_PROFILE
+        - name: Define and Echo Profile
+          run: |
+           PROFILE_NAME="885798945027_AdministratorAccess"
+           echo "AWS Profile Name: $PROFILE_NAME"
+           # You can then use this profile in subsequent AWS CLI commands
+           # aws --profile $PROFILE_NAME s3 ls
         - name: get caller identity 1
           run: |
             aws sts get-caller-identity
