@@ -1,8 +1,15 @@
 import boto3
 import json
+import streamlit
+
+aws_access_key_id = st.secrets["AWS_ACCESS_KEY_ID"]
+aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
+aws_session_token = st.secrets["AWS_SESSION_TOKEN"]
+aws_region = st.secrets.get("AWS_REGION", "us-east-2")
 
 session = boto3.Session(
-    profile_name="885798945027_AdministratorAccess", region_name="us-east-2")
+    aws_access_key_id=aws_access_key_id,
+    aws_secret_access_key=aws_secret_access_key, aws_session_token=aws_session_token, region_name="us-east-2")
 bedrock_agent_runtime = session.client(
     service_name='bedrock-agent-runtime', region_name='us-east-2')
 
@@ -51,3 +58,4 @@ def call_bedrock_service(question):
 
 # if __name__ == '__main__':
 #     main()
+
