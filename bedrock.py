@@ -1,6 +1,6 @@
 import boto3
 import json
-import streamlit
+import streamlit as st
 
 aws_access_key_id = st.secrets["AWS_ACCESS_KEY_ID"]
 aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
@@ -58,4 +58,5 @@ def call_bedrock_service(question):
 
 # if __name__ == '__main__':
 #     main()
+
 
