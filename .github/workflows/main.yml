@@ -28,6 +28,8 @@ jobs:
             aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
             output-credentials: true
+        - name: Echo AWS Profile Name
+          run: echo "AWS Profile Name:$AWS_PROFILE"
         - name: get caller identity 1
           run: |
             aws sts get-caller-identity
