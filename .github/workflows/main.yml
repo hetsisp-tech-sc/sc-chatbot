@@ -34,4 +34,4 @@ jobs:
             aws configure set aws_session_token ${{ secrets.AWS_SESSION_TOKEN }}
             
         - name: Run AWS CLI Command
-          run: aws s3 ls --profiñe "885798945027_AdministratorAccess"
+          run: aws s3 ls --profile "885798945027_AdministratorAccess"
