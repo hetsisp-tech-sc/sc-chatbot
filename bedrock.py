@@ -40,7 +40,7 @@ def call_bedrock_service(question):
                 }
             }
         }
-
+        )
         generated_text = response['output']['text']
         return generated_text
     except Exception as e:
@@ -60,6 +60,7 @@ def call_bedrock_service(question):
 
 # if __name__ == '__main__':
 #     main()
+
 
 
 
