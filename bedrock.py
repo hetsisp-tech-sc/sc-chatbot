@@ -39,7 +39,7 @@ def call_bedrock_service(question):
                     'modelArn': model_arn
                 }
             }
-        )
+        }
 
         generated_text = response['output']['text']
         return generated_text
@@ -60,6 +60,7 @@ def call_bedrock_service(question):
 
 # if __name__ == '__main__':
 #     main()
+
 
 
 
