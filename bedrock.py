@@ -33,7 +33,7 @@ def call_bedrock_service(question):
                             'guardrailVersion': 'DRAFT'
                         },
                         'promptTemplate': {
-                            'textPromptTemplate': "A chat between a curious User and an artificial intelligence Bot. The Bot gives helpful, detailed, and polite answers to the User's questions.\n \nIn this session, the model has access to set of search results and a user's question, your job is to answer the user's question using only information from the search results. You must follow the following guidelines:\n \n- If the search results do not contain information that can answer the question, please respond with \"Sorry I could not find an exact answer to the question\".\n- Always remember to add a citation to the end of your response using markers like %[1]%, %[2]%, %[3]%, etc for the corresponding passage supports the response.\n- Always add a brief explaination to your answer. Make the response concise but comprehensive.\n\nNow, below is a list of texts and/or images retrieved for user's question. Read them carefully and then follow my instructions: \n\n$search_results$\n\nUsing the information from above search results to provide answer to user's question. In your answer make sure to first quote the images (by mentioning image title or image ID) from which you can identify relevant information, then followed by your reasoning steps and answer. \n\n$output_format_instructions$\n\nHere is the user's query to be responded in the languange of the user's query:\n$query$\n\n"
+                            'textPromptTemplate': "A chat between a curious User and an artificial intelligence Bot. The Bot gives helpful, detailed, and polite answers to the User's questions.\n \nIn this session, the model has access to set of search results and a user's question, your job is to answer the user's question using only information from the search results. You must follow the following guidelines:\n \n- If the search results do not contain information that can answer the question, please respond with \"Sorry I could not find an exact answer to the question\".\n- Always add a citation to the end of your response using markers like %[1]%, %[2]%, %[3]%, etc for the corresponding passage supports the response.\n- Always add a brief explaination to your answer. Make the response concise but comprehensive.\n\nNow, below is a list of texts and/or images retrieved for user's question. Read them carefully and then follow my instructions: \n\n$search_results$\n\nUsing the information from above search results to provide answer to user's question. In your answer make sure to first quote the images (by mentioning image title or image ID) from which you can identify relevant information, then followed by your reasoning steps and answer. \n\n$output_format_instructions$\n\nHere is the user's query to be responded in the languange of the user's query:\n$query$\n\n"
                         }
                     },
                     'knowledgeBaseId': knowledge_base_id,
@@ -61,6 +61,7 @@ def call_bedrock_service(question):
 
 # if __name__ == '__main__':
 #     main()
+
 
 
 
