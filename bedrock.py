@@ -16,7 +16,7 @@ bedrock_agent_runtime = session.client(
 
 def call_bedrock_service(question):
     user_question = question
-    knowledge_base_id = 'ZDBAQEPJIX'
+    knowledge_base_id = 'SMTCIJY05R'
     model_arn = 'arn:aws:bedrock:us-east-2:885798945027:inference-profile/us.amazon.nova-micro-v1:0'
 
     try:
@@ -61,6 +61,7 @@ def call_bedrock_service(question):
 
 # if __name__ == '__main__':
 #     main()
+
 
 
 
